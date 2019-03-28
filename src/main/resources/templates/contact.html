@@ -11,7 +11,7 @@
 <div class="container">
 <h3> Salesforce Contacts : </h3>
 <table>
-<th><td>Id</td><td>SFID</td><td>First</td><td>Last</td><td>Email</td></th>
+<th><td>Id</td><td>SFID</td><td>First</td><td>Last</td><td>Email</td><td>Phone</td></th>
 <tr th:each="contact : ${contacts}">
     <td></td>
     <td th:text="${contact.id}" ></td>
@@ -19,6 +19,7 @@
     <td th:text="${contact.first}" ></td>
     <td th:text="${contact.last}" ></td>
     <td th:text="${contact.email}" ></td>
+     <td th:text="${contact.phone}" ></td>
 </tr>
 </table>
 </div>

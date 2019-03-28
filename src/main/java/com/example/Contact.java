@@ -8,9 +8,13 @@ public class Contact {
     private String sfid;
     private String first;
     private String last;
+    private String phone;
 
     public void setEmail(String email) {
         this.email = email;
+    }
+     public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public void setId(int id) {
@@ -42,6 +46,10 @@ public class Contact {
     public int getId()
     {
         return id;
+    }
+public String getPhone()
+    {
+        return phone;
     }
 
     public String getSfid()

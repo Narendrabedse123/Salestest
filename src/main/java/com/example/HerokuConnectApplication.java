@@ -36,9 +36,7 @@ public class HerokuConnectApplication {
             Statement stmt = connection.createStatement();
             String sql;
           
-		sql = "SELECT Contact.id, Contact.SFID,Contact.name,Contact.firstname, Contact.lastname,Contact.email,Account.phone\n" + 
-            		"FROM salesforce.Account\n" + 
-            		"INNER JOIN salesforce.Contact ON Account.Name=Contact.Name";
+		sql = "SELECT phone,(select id,sfid,name,firstname,lastname,email from Contacts) FROM Account ";
             ResultSet rs = stmt.executeQuery(sql);
             StringBuffer sb = new StringBuffer();
             List contacts = new ArrayList<>();

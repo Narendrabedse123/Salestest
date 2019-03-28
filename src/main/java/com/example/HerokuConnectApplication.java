@@ -35,10 +35,10 @@ public class HerokuConnectApplication {
             Connection connection = getConnection();
             Statement stmt = connection.createStatement();
             String sql;
-            sql = "SELECT id, sfid,  firstname, lastname, name, email FROM salesforce.contact";
-		sql = "SELECT contact.id, contact.firstname, contact.lastname,contact.email,account.phone\n" + 
-            		"FROM salesforce.account\n" + 
-            		"INNER JOIN salesforce.contact ON account.ID=contact.arcmtest__Account_Id__c";
+          
+		sql = "SELECT Contact.id, Contact.firstname, Contact.lastname,Contact.email,Account.phone\n" + 
+            		"FROM salesforce.Account\n" + 
+            		"INNER JOIN salesforce.Contact ON Account.SFID=Contact.arcmtest__Account_Id__c";
             ResultSet rs = stmt.executeQuery(sql);
             StringBuffer sb = new StringBuffer();
             List contacts = new ArrayList<>();

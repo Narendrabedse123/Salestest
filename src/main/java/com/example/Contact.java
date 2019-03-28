@@ -35,14 +35,16 @@ public class Contact {
 
     private String email;
     public Contact() {}
-    public Contact(int id, String sfid, String first, String last, String email ) {
+    public Contact(int id, String sfid, String first, String last, String email,String phone ) {
         super();
         this.id = id;
         this.sfid = sfid;
         this.first = first;
         this.last = last;
         this.email = email;
+        this.phone = phone;
     }
+    
     public int getId()
     {
         return id;
